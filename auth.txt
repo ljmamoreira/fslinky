@@ -1,0 +1,5 @@
+PAT
+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
+ 
+git push https://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@github.com/ljmamoreira/fslinky.git
+
