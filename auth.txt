@@ -1,5 +1,5 @@
 PAT
-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
+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
  
-git push https://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@github.com/ljmamoreira/fslinky.git
+git push https://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@github.com/ljmamoreira/fslinky.git
 
