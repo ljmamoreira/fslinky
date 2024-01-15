@@ -1,4 +1,5 @@
 *.pdf
+!time_calibration.pdf
 *.log
 *.aux
 *.MP4

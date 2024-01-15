@@ -2,3 +2,8 @@
     Calibração temporal dos vídeos: 120 fps
     Criado repositório no github
 
+2024-01-15
+    JA - Criei a pasta lab_data para armazenar videos, dados da determinação da
+    constante elástica e comprimento da mola, etc
+    JA - Criei pasta lab_data/time_calibration, e armazenei ficheiro pdf com
+    dados da calibração temporal dos vídeos.
