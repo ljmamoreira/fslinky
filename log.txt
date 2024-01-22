@@ -7,3 +7,29 @@
     constante elástica e comprimento da mola, etc
     JA - Criei pasta lab_data/time_calibration, e armazenei ficheiro pdf com
     dados da calibração temporal dos vídeos.
+
+2024-01-22
+    JA+SJ - Calibração das molas
+    Grampo: 0,6 g
+    Mola inteira
+        Massa: 37,4 g
+        Massa suspensa (g)  Comprimento (cm)
+            10,2                 72,5
+            20,8                 97,0
+            31,1                120,5
+            41,9                145,5
+            52,3                167,5
+        Resultado:
+            k = 0,433 N7m; l_0 = 0,484 m
+    Meia mola:
+        Massa: 19,2 g
+        Massa suspensa (g)  Comprimento (cm)
+            10,1                25,5
+            20,9                38,0
+            31,1                51,0
+            42,0                63,5
+            50,7                74,0
+            61,2                85,0
+        Resultado:
+            k = 0,835 N/m; l0 = 0,1316 m
+    Pode ser necessário refazer isto com massas maiores.

@@ -3,3 +3,7 @@
 *.log
 *.aux
 *.MP4
+*_latexmk
+*.fls
+*synctex.gz
+misc

@@ -1,0 +1,40 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\usetikzlibrary{calc,patterns,decorations.markings}
+\usetikzlibrary{positioning}
+%
+\newcommand{\mola}[5]%Quanto menor for o valor 3,4 e 5 dado à função mais comprimida estará a mola%
+{
+%------------------------------------------------------------Pontos Importantes------------------------------------------------------------%
+\coordinate (bola1) at (0,{#1});
+\coordinate (bola2) at (0,{#2}); 
+\coordinate (bola3) at (0,-6);
+\coordinate (bola4) at (0,-10);
+\coordinate (reticencias) at (0,-8);
+%-------------------------------------------------------------Desenhar as Molas------------------------------------------------------------%
+\tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#3, amplitude=2.5mm,coil}]
+\tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#4, amplitude=2.5mm,coil}]
+\draw [spring] (bola3) -- (bola2);
+\tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#5, amplitude=2.5mm,coil}]
+\draw [spring] (bola4) -- (bola3);
+%-------------------------------------------------------------Desenhar as Bolas------------------------------------------------------------%
+\draw[dashed] (bola2) -- +(2,0);
+\draw [fill=white] (bola2) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{$m$};
+\draw [fill=white] (bola3) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{$m$};
+\draw [fill=white] (bola4) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{$m$};
+%----------------------------------------------------------Desenhar as Reticências--------------------------------------------------------%
+\node[rectangle,fill=white, minimum width = 2cm, minimum height = 1.1cm] (r) at (reticencias) {};
+\draw (reticencias) node[scale=2.3]{$\rotatebox{90}{$\cdots$}$} ;
+}
+
+\begin{document}
+\centering
+\begin{tikzpicture}
+\mola{2}{-2}{3mm}{3mm}{3mm}
+\node[xshift=-1.2cm,anchor=west] at (-1.5,-2) {\textbf{Bola 0}};
+\node[xshift=-1.2cm,anchor=west] at (-1.5,-6) {\textbf{Bola 1}};
+\node[xshift=-1.605cm,anchor=west] at (-1.5,-10) {\textbf{Bola \boldmath$N-1$}};
+\draw[thick,->] (2,-2) -- (2,-4) node[draw=none,inner sep = 0,scale=1.5,xshift=.2cm,text=black]{$x$};
+\end{tikzpicture}
+\end{document}

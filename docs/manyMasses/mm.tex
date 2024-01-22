@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage[a4paper]{geometry}
+\usepackage{amsmath, icomma, tikz, physics}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\title{Queda de uma mola ideal suspensa com massas distribuídas regularmente}
+\author{}
+\date{Janeiro de 2024}
+\begin{document}
+\maketitle
+\section{Introdução}
+Consideremos uma mola ideal suspensa verticalmente do teto, com massas iguais
+dispostas regularmente ao longo do seu comprimento.
+\begin{tikzpicture}[black!75,thick]
+ 
+% Supporting structure
+\fill [pattern = north west lines] (-1.5,0) rectangle ++(3,.2);
+\draw[thick] (-1.5,0) -- ++(3,0);
+\draw (0,0) -- (0,-0.3);
+\fill (0,-0.3) circle (0.1);
+\draw
+[
+    decoration={
+        coil,
+        segment length = 2mm,
+        amplitude = 2mm,
+        aspect = 0.5,
+        post length = 0mm,
+        pre length = 0mm},
+    decorate] (0,-0.3) -- ++(0,-2.5);
+ 
+\end{tikzpicture}
+\end{document}
