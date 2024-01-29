@@ -11,9 +11,21 @@
 \begin{document}
 \maketitle
 \section{Introdução}
-\begin{minipage}[t]{0.85\linewidth}
-  Consideremos uma mola ideal suspensa verticalmente do teto, com $N$ massas
-  iguais dispostas regularmente ao longo do seu comprimento (ver a figura). 
+\begin{minipage}[t]{0.80\linewidth}
+  Consideremos uma mola ideal suspensa verticalmente do teto, com comprimento
+  natural $L_0$ e constante elástica $K$, com $N$ partículas pontuais iguais
+  dispostas regularmente ao longo do seu comprimento, com massas $m=M/N$ com $M$
+  constante, numeradas de 0 a $N-1$ (ver a figura). Seja $x_i=x_i(t)$ a posição
+  da $i$-ésima massa. O sistema é equivalente a um conjunto de $N-1$ molas com
+  comprimento natural $l_0=L_0/(N-1)$ e constante elásticas $k=K(N-1)$.
+
+  Em equilíbrio estático, a resultante das forças aplicada em cada massa (a
+  força elástica exercida pela mola acima dela e o peso de toda a cadeia de
+  massas suspensas nessa mesma mola) deve ser nula. Assim, a condição de
+  equilíbrio estático da $i$-ésima bola é
+  \begin{equation}
+    x^0_i = x^0_{i-1} + (N-i)\frac{mg}{k} + l_0, \qquad i\geq1.
+  \end{equation}
 \end{minipage}\hfill
 \begin{tikzpicture}[baseline=(current bounding box.north)]
   \small
@@ -38,12 +50,25 @@
   \draw [spring={1.5mm}{0.5mm}] ([yshift=-1.8mm]a) -- ++(0,-1.45)
     coordinate[yshift=-1.65mm](b);
   \draw [spring={1.0mm}{0mm}] ([yshift=-1.8mm]b)-- ++(0,-0.61) coordinate (c);
-  \path (a) node[circle, draw, fill=white,inner sep=1]{1};
-  \path (b) node[circle, draw, fill=white,inner sep=1]{2};
+  \path (a) node[circle, draw, fill=white,inner sep=1]{\rule{0mm}{3mm}}
+    node[left, inner sep=8]{0};
+  \path (b) node[circle, draw, fill=white,inner sep=1]{\rule{0mm}{3mm}}
+    node[left, inner sep=8]{1};
   %\fill (c) circle(0.1);
   \path (c) node[inner sep=0,below]{$\vdots$};
   \draw [spring={0.7mm}{1mm}] (0,-3.75) -- ++(0,-0.405)
-    node[below,circle,fill=white, draw, inner sep=0]{$N$};
- 
+    node[below,circle,fill=white, draw, inner sep=0]{\rule{0mm}{3mm}}
+    node[shift={(-7mm,-2mm)}]{$N-1$};
 \end{tikzpicture}
+
+\vspace{0.75em}
+\noindent
+Sobre a massa no topo desta cadeia ($i=0$), há outra força aplicada, a que
+sustem todo o sistema. Esta igualdade recursiva pode escrever-se na forma
+\begin{equation}
+  x^0_i = x^0_0 + i\qty[l_0 + \qty(N-\frac{i+1}{2})\frac{mg}{k}].
+\end{equation}
+No instante $t=0$ a 0-ésima massa é largada, e o sistema cai partindo do
+repouso.
+
 \end{document}
