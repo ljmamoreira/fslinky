@@ -10,8 +10,44 @@
 \date{Janeiro de 2024}
 \begin{document}
 \maketitle
+
 \section{Introdução}
+Vários vídeos disponíveis no YouTube mostram a queda de uma mola elástica
+vertical, partindo do repouso suspensa da extremidade superior
+\cite{ytvid1,ytvid2}. O movimento de queda
+ilustrado é interessante porque parece acontecer que a extremidade inferior da
+mola como que fica em repouso enquanto a outra cai aceleradamente na direção da
+primeira.
+
+Naturalmente, isto deve-se ao facto de a extremidade inferior da mola se
+encontrar inicialmente em equilíbrio sob a ação do seu peso e da força elástica
+nela exercida. A variação da elongação da mola após o início do movimento começa
+por fazer sentir na extremidade superior, onde a resultante das forças aplicadas
+(peso e força elástica) tem maior intensidade; na extremidade inferior a
+situação de equlíbrio estático inicial permanece, até set atingida pela onda
+longitudinal de compressão iniciada na extremidade superior.
+
+Esta explicação qualitativa é convincente mas considera uma mola real, com uma
+dada distribuição de massa e de elasticidade ao longo do seu comprimento; em
+suma, uma mola \emph{com} dinâmica. Ora, nos problemas de física elementar,
+considera-se desprezável a massa das molas. Assim, as molas aparecem apenas como
+veículos das interações entre os corpos presos nas suas extremidades; afetam a
+dinâmica desses corpos mas não têm dinâmica própria. Com este trabalho
+pretendemos verificar, analitica e experimentalmente, se a queda de molas ideais
+exibe também o efeito referido.
+
+Uma vez que uma mola ideal não tem massa, não tem dinâmica. Não fica suspensa
+por uma extremidade, nem cai quando essa extremidade é solta. Devemos pois
+acrescentar ao problema massas dispostas ao longo da mola (no mínimo dos
+mínimos, uma massa em cada extremidade), que sentem o efeito das forças
+(gravítica e elástica) exercidas no sistema e que manifestam o comportamento
+dinâmicco que elas determinam. 
+
+\section{Dinâmica da queda de uma mola elástica ideal com massas dispostas
+regularmente}
+\noindent
 \begin{minipage}[t]{0.80\linewidth}
+  \hspace{1.2em}
   Consideremos uma mola ideal suspensa verticalmente do teto, com comprimento
   natural $L_0$ e constante elástica $K$, com $N$ partículas pontuais iguais
   dispostas regularmente ao longo do seu comprimento, com massas $m=M/N$ com $M$
@@ -68,7 +104,30 @@ sustem todo o sistema. Esta igualdade recursiva pode escrever-se na forma
 \begin{equation}
   x^0_i = x^0_0 + i\qty[l_0 + \qty(N-\frac{i+1}{2})\frac{mg}{k}].
 \end{equation}
-No instante $t=0$ a 0-ésima massa é largada, e o sistema cai partindo do
-repouso.
 
+No instante $t=0$ a 0-ésima massa é largada, e o sistema cai partindo do
+repouso. De acordo com a segunda lei de Newton, as acelerações das diferentes
+massas são dadas por
+\begin{equation}
+  \begin{aligned}
+    \ddot x_0     &= g + \omega^2 (x_1-x_0-l_0)\\
+    \ddot x_i     &= g + \omega^2 
+      (x_{i+1}-2x_i+x_{i-1}),\qquad i=1, \ldots, N-2\\
+    \ddot x_{N-1} &= g - \omega^2 (x_{N~1}-x_{N-2}-l_0),
+  \end{aligned}
+\end{equation}
+com $\omega^2=k/m=N(N-1)K/M$.
+
+
+%-------------------------------------------------------------------------------
+
+\begin{thebibliography}{100}
+  \bibitem{ytvid1} Veritassium, 
+    \textsl{Does a Falling Slinky Defy Gravity,}\\
+    \texttt{https://www.youtube.com/watch?v=uiyMuHuCFo4}
+    \bibitem{ytvid2}
+      ActionLabShorts,
+      \textsl{Anti-Gravity Slinky,}\\
+      \texttt{https://www.youtube.com/shorts/xlV\_DPdu8DI}
+\end{thebibliography}
 \end{document}
