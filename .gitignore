@@ -6,5 +6,6 @@
 *_latexmk
 *.fls
 *synctex.gz
+*ipynb_checkpoints
 misc
 
