@@ -5,7 +5,8 @@
 *.MP4
 *_latexmk
 *.fls
-*synctex.gz
+*synctex*
 *ipynb_checkpoints
 misc
 videos
+
