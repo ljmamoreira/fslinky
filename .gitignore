@@ -2,6 +2,10 @@
 !time_calibration.pdf
 *.log
 *.aux
+*.toc
+*.nav
+*.out
+*.snm
 *.MP4
 *_latexmk
 *.fls
