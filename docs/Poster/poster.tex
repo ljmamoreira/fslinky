@@ -70,9 +70,9 @@
 
 \title{Queda de uma mola ideal suspensa com massas distribuídas regularmente}
 
-\author{José Amoreira \inst{1,2} \and João Santos \inst{1} \and João Esteves \inst{1}}
+\author{José Amoreira \inst{1,2,3} \and João Santos \inst{1} \and João Esteves \inst{1}}
 
-\institute[]{\inst{1}Universidade da Beira Interior \samelineand \inst{2} Centro de Matemática e Aplicações}
+\institute[]{\inst{1}Universidade da Beira Interior  \samelineand \inst{2} Centro de Matemática e Aplicações \and \inst{3} Laboratório de Instrumentação e Física Experimental de Partículas}
 
 % ====================
 % Footer (optional)
@@ -89,7 +89,7 @@
 % ====================
 
 % use this to include logos on the left and/or right side of the header:
-\logoright{\includegraphics[scale=1.5]{logos/DF2.png}}
+%\logoright{\includegraphics[scale=1.5]{logos/DF2.png}}
 \logoleft{\includegraphics[scale=1.5]{logos/DF2.png}}
 
 % ====================
@@ -108,11 +108,18 @@
 % Abstract
 % ----------------------------------
   \begin{block}{Motivação}
-    O movimento de queda ilustrado é interessante
-    porque parece acontecer que a extremidade inferior da mola como que fica em repouso enquanto a outra cai aceleradamente na direção da primeira. Naturalmente, isto deve-se ao facto de a extremidade inferior da mola se encontrar inicialmente em equilíbrio sob a ação do seu peso e da força elástica nela exercida. A variação da elongação da mola após o início do movimento começa por fazer sentir na extremidade superior, onde a resultante das forças aplicadas (peso e força elástica) tem maior intensidade; na extremidade inferior a situação de equilíbrio estático inicial permanece, até ser atingida pela onda longitudinal de compressão iniciada na extremidade superior.
-    Esta explicação qualitativa é convincente mas considera uma mola real, com uma dada distribuição de massa e de elasticidade ao longo do seu comprimento; em suma, uma mola com dinâmica. Ora, nos problemas de física elementar, considera-se desprezável a massa das molas. Assim, as molas aparecem apenas como veículos das interações entre os corpos presos nas suas extremidades; afetam a dinâmica desses corpos mas não têm dinâmica própria. Com este trabalho
-    pretendemos verificar, analítica e experimentalmente, se a queda de molas ideais exibe também o efeito referido.
-    Uma vez que uma mola ideal não tem massa, não tem dinâmica. Não fica suspensa por uma extremidade, nem cai quando essa extremidade é solta. Devemos pois acrescentar ao problema massas dispostas ao longo da mola (no mínimo dos mínimos, uma massa em cada extremidade), que sentem o efeito das forças (gravítica e elástica) exercidas no sistema e que manifestam o comportamento dinâmico que elas determinam.
+Vários vídeos disponíveis na plataforma YouTube mostram a queda de uma mola
+elástica a partir de uma situação de repouso estático em que ela se encontra na
+vertical, suspensa de uma das suas extremidades. Estes vídeos são interessantes
+poque mostram a extremidade inferior da mola como que a aguardar que a
+extremidade superior a atinja, antes de começar o seu movimento de queda
+propriamente dito.
+
+A explicação deste comportamento é dada pela teoria da elasticidade. A onda de
+deformação gerada na extremidade superior da mola quando é solta propaga-se
+longitudinalmente com uma velocidade finita, e só quando atinge a extremidade
+inferior, alterando aí o estado de deformação inicial, se altera o equilíbrio de
+forças (peso e força elástica) que mantinham esta extremidade em repouso.
   \end{block}
   
 % ----------------------------------
@@ -137,9 +144,9 @@
 \end{block}
 
 \begin{block}{Procedimento experimental}
-   No começo, observamos a queda do conjunto mola e bola para compreender o seu comportamento. O experimento foi inicialmente realizado com duas bolas e uma mola. Em seguida, repetimos o procedimento com três bolas, dividindo a mola ao meio. Ambas as execuções foram gravadas em câmara lenta, a uma taxa de 120 frames por segundo, e posteriormente analisadas usando o software Tracker.
-    \input{images/figure4}
-    Em seguida, a constante elástica tanto para a mola completa quanto para a metade da mola foi determinada por meio de outro experimento. Com esses resultados em mãos, os valores teóricos foram calculados utilizando o Python e comparados com os resultados experimentais obtidos pelo Tracker. \emph{(mais informação no código QR)}
+   Foi observada e gravada a queda do conjunto mola e bola para compreender o seu comportamento. O experimento foi realizado de duas maneiras diferentes, com duas bolas e uma mola, e com três bolas, dividindo a mola ao meio. Ambas as execuções foram gravadas em câmara lenta, a uma taxa de 120 frames por segundo, e posteriormente analisadas usando o software Tracker.
+    \input{images/figure1}
+ A constante elástica tanto para a mola completa quanto para a metade da mola foi determinada por meio de outro experimento. Com esses resultados em mãos, os valores teóricos foram calculados utilizando o Python e comparados com os resultados experimentais obtidos pelo Tracker. \emph{(mais informação no código QR)}
 \end{block}
 
 % -------------------------------
@@ -159,13 +166,13 @@
 
 \begin{block}{Resultados}
     
-    Após realizar o procedimento todo explicado no bloco anterior, comparámos então os resultados:
+    Após realizar o procedimento todo explicado no bloco anterior, podemos então observar os resultados:
     \input{images/figure2}
-
-    Cras ut fermentum nunc, id interdum ex. Donec tincidunt metus nulla, a interdum ante efficitur cursus. Proin justo mauris, imperdiet vel efficitur ac, lobortis et neque. Etiam ac iaculis libero.
-
-    \input{tables/table1}
-
+    E, observando as três no mesmo gráfico
+   \begin{figure}
+   \includegraphics[width=.5\columnwidth]{images/4v2.jpg}
+   \caption{Comparação dos resultados experimentais e numéricos.}
+   \end{figure}
 \end{block}
 
 % -------------------------------
