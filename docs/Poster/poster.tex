@@ -1,23 +1,11 @@
-%-------------------------------------
-% This template comes from Anish Athalye (Unofficial University of Cambridge Poster Template). 
-
-% The Poster Template has been modified by Dr. Rahul Raoniar to fulfill B.Tech/Master/Ph.D./PostDoc student's poster presentation requirements.
-
-% Description: I made this unofficial Poster Template for the Indian Institute of Technology Bombay (IITB). Feel free to use it, modify it, and share it. 
-
-% Thank you note: A huge thanks goes to Anish Athalye for the original template.
-%-------------------------------------
-
-
 \documentclass[final]{beamer}
-
 % ====================
 % Packages
 % ====================
 \usepackage{url}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[orientation=portrait,size=a0,scale=1.0]{beamerposter}
+\usepackage[orientation=portrait,size=a0,scale=1.00]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{UBI}
 \usepackage{graphicx}
@@ -31,71 +19,40 @@
 \usepackage{xcolor}
 \usepackage[skip=2pt,font=normalsize]{subcaption}
 \usepackage{adjustbox}
-
-% ----------------------------------
-% For plotting study methodology
-% ----------------------------------
-
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
-
-% Defining Tickz Style
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, text width = 10cm, draw=black, fill=white]
-
-% \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, text width = 4.5cm, draw=black, fill=blue!30]
-
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, text width = 6cm, draw=black, fill=white, text width = 10cm]
-
-% \tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
-
-\tikzstyle{arrow} = [ultra thick,->,>=stealth]
-
-
 % ====================
 % Lengths
 % ====================
-
 % If you have N columns, choose \sepwidth and \colwidth such that
 % (N+1)*\sepwidth + N*\colwidth = \paperwidth
 \newlength{\sepwidth}
 \newlength{\colwidth}
 \setlength{\sepwidth}{0.025\paperwidth}
 \setlength{\colwidth}{0.45\paperwidth}
-
 \newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
-
 % ====================
 % Title
 % ====================
-
 \title{Queda de uma mola ideal suspensa com massas distribuídas regularmente}
-
-\author{José Amoreira \inst{1,2,3} \and João Santos \inst{1} \and João Esteves \inst{1}}
-
-\institute[]{\inst{1}Universidade da Beira Interior  \samelineand \inst{2} Centro de Matemática e Aplicações \and \inst{3} Laboratório de Instrumentação e Física Experimental de Partículas}
-
+\author{José Amoreira \inst{1,2,3} \and João Santos \inst{2} \and João Esteves \inst{2}}
+\institute[]{\inst{1} Laboratório de Instrumentação e Física Experimental de Partículas \and  \inst{2}Universidade da Beira Interior  \samelineand \inst{3} Centro de Matemática e Aplicações}
 % ====================
 % Footer (optional)
 % ====================
-
 \footercontent{
   Física 2024 \hfill
   UBI - Departamento de Física}
 % (can be left out to remove footer)
-
-
 % ====================
 % Logo (optional)
 % ====================
-
 % use this to include logos on the left and/or right side of the header:
 %\logoright{\includegraphics[scale=1.5]{logos/DF2.png}}
 \logoleft{\includegraphics[scale=1.5]{logos/DF2.png}}
-
 % ====================
 % Body
 % ====================
-
 \begin{document}
 
 \begin{frame}[t]
@@ -107,34 +64,34 @@
 % ----------------------------------
 % Abstract
 % ----------------------------------
-  \begin{block}{Motivação}
+  \begin{exampleblock}{Motivação}
 Vários vídeos disponíveis na plataforma YouTube mostram a queda de uma mola
 elástica a partir de uma situação de repouso estático em que ela se encontra na
 vertical, suspensa de uma das suas extremidades. Estes vídeos são interessantes
 poque mostram a extremidade inferior da mola como que a aguardar que a
 extremidade superior a atinja, antes de começar o seu movimento de queda
-propriamente dito.
+propriamente dito. 
 
-A explicação deste comportamento é dada pela teoria da elasticidade. A onda de
-deformação gerada na extremidade superior da mola quando é solta propaga-se
-longitudinalmente com uma velocidade finita, e só quando atinge a extremidade
-inferior, alterando aí o estado de deformação inicial, se altera o equilíbrio de
-forças (peso e força elástica) que mantinham esta extremidade em repouso.
-  \end{block}
+A explicação deste comportamento é dada pela teoria da elasticidade de um meio
+contínuo. A onda de deformação gerada na extremidade superior da mola quando é
+solta propaga-se longitudinalmente com uma velocidade finita, e só quando atinge
+a extremidade inferior, alterando aí o estado de deformação inicial, se altera o
+equilíbrio de forças (peso e força elástica) que mantinham esta extremidade em
+repouso.
+
+Claramente, o modelo elementar de mola ideal, em que se despreza a sua massa, é
+insuficiente para enquadrar esta explicação, uma vez que não tendo massa, (1)~a
+mola não fica sujeita à gravidade, ou seja, não cai e (2)~a sua deformação é
+sempre uniforme, pelo que a força sobre a extremidade inferior altera-se
+instantaneamente assim que a extremidade superior inicia a sua queda. 
+
+Com este trabalho, tentou-se descrever o movimento de queda das molas reais
+usando o modelo de mola ideal, com massas iguais distribuídas uniformemente
+sobre o seu comprimento.
+  \end{exampleblock}
   
-% ----------------------------------
-% Section: Literature review
-% ----------------------------------
-  \begin{alertblock}{Resumo}
 
-    jmfjd fgghjgfh
-
-    \heading{Research gaps}
-    Pjdnvfj
-
-  \end{alertblock}
-
-\begin{block}{Descrição analítica}
+\begin{block}{Formalismo}
     Aplicando a segunda lei de Newton a este formalismo, ficamos com:
     \begin{align*}
         \ddot x_0 &=-Ng+\omega^2(x_1-x_0)\\[1cm] 
@@ -178,7 +135,7 @@ forças (peso e força elástica) que mantinham esta extremidade em repouso.
 % -------------------------------
 % Section: Conclusions
 % -------------------------------
-   \begin{block}{Conclusões}
+   \begin{exampleblock}{Conclusões}
     \begin{itemize}
       \item Sed et augue accumsan nibh ullamcorper accumsanam dictum urna tortor, ut pretium leo eleifend.  
       \item Donec suscipit, urna quis tempus consectetur, quam est placerat ante, et scelerisque metus velit. 
@@ -186,51 +143,8 @@ forças (peso e força elástica) que mantinham esta extremidade em repouso.
       \item Praesent blandit faucibus quam, et tincidunt mauris sagittis eget 2.2\%.
       \item Dolor sit amet, consectetur adipiscing elit. Mauris in nulla ultricies suscipit.
     \end{itemize}
-  \end{block}
-
-
-% -------------------------------
-% Section: What is already known about this subject?
-% -------------------------------
-  \begin{exampleblock}{What is already known about this subject?}
-
-    \begin{itemize}
-      \item \textbf{Lorem ipsum dolor sit amet}, consectetur adipiscing elit. Mauris in nulla ac leo ultricies suscipit.
-      \item The \textbf{Duis vestibulum augue} in leo placerat, sit amet pharetra mi elementum.
-      \item \textbf{Fusce sit amet} velit pulvinar, feugiat velit sit amet, tristique dolor.
-    \end{itemize}
-
   \end{exampleblock}
 
-  
-% -------------------------------
-% Section: What does this study add?
-% -------------------------------
-  \begin{exampleblock}{What does this study add?}
-    \begin{itemize}
-      \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nulla ac leo ultricies suscipit.
-      \item The Duis vestibulum augue in leo placerat, sit amet pharetra mi elementum.
-      \item Fusce sit amet velit pulvinar, feugiat velit sit amet, tristique dolor.
-    \end{itemize}
-
-  \end{exampleblock}
-
-
-% -------------------------------
-% Section: Practical Implications
-% -------------------------------
-  \begin{exampleblock}{Practical implications}
-    \begin{itemize}
-      \item Ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nulla ultricies suscipit.
-      \item Duis augue in leo placerat, sit amet pharetra mi elementum.
-      \item Sit amet pulvinar, feugiat velit sit amet, tristique dolor.
-    \end{itemize}
-
-  \end{exampleblock}
-
-% -------------------------------
-% Section: References
-% ------------------------------- 
 
   \begin{block}{Referencias}
 
