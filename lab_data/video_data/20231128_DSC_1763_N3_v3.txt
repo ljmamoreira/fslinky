@@ -1,5 +1,7 @@
 # 20231128_DSC_1763.mp4
-#	mass A	mass B	mass C	
+# Comment:
+#   Data from video videos/20231128_DSC_1763.mp4. Deleted final lines with
+#   missing # values mass A	mass B	mass C	
 # t	x	x	x	
 0.000000E0	2.449636E0	9.657229E-1	1.270787E-1
 8.333000E-3	2.449377E0	9.658106E-1	1.271851E-1
