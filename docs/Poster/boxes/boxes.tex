@@ -3,7 +3,8 @@
 \usepackage[portuguese]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[a4paper,margin=]{geometry}
-\usepackage{icomma,amsmath}
+\usepackage{icomma,amsmath,tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns}
 \begin{document}
 \section*{Motivação / Introdução}
 Vários vídeos disponíveis na plataforma YouTube mostram a queda de uma mola
@@ -31,6 +32,63 @@ usando o modelo de mola ideal, com massas iguais distribuídas uniformemente
 sobre o seu comprimento.
 
 \section*{Formalismo}
+\begin{tikzpicture}[baseline=(current bounding box.north),scale=0.9]
+  \small
+  % Supporting structure
+  \fill [pattern = north west lines] (-0.75,0) rectangle ++(1.5,.2);
+  \draw[thick] (-0.75,0) -- ++(1.5,0);
+  \draw (0.80,-4.7) -- (0.90,-4.7);
+  \draw [->] (0.85,-4.7) -- +(0,1) node[above]{$y$};
+  % Spring
+  \tikzset
+  {
+    spring/.style n args={2}{decorate,
+                   decoration={coil, aspect=0.4,
+                               segment length=#1,
+                               amplitude = 2mm,
+                               %pre length=2mm,
+                               %post length=#2
+                              }
+                            }
+  }
+  \draw (0,0) -- (0,-0.4) coordinate(a);
+  \draw [spring={1.5mm}{0.5mm}] ([yshift=-1.8mm]a) -- ++(0,-1.45)
+    coordinate[yshift=-1.65mm](b);
+  \draw [spring={1.0mm}{0mm}] ([yshift=-1.8mm]b)-- ++(0,-0.61) coordinate (c);
+  \path (a) node[circle, draw, fill=white,inner sep=1]{\rule{0mm}{3mm}}
+    node[left, inner sep=8]{0};
+  \path (b) node[circle, draw, fill=white,inner sep=1]{\rule{0mm}{3mm}}
+    node[left, inner sep=8]{1};
+  %\fill (c) circle(0.1);
+  \path (c) node[inner sep=0,below]{$\vdots$};
+  \draw [spring={0.7mm}{1mm}] (0,-3.75) -- ++(0,-0.405)
+    node[below,circle,fill=white, draw, inner sep=0]{\rule{0mm}{3mm}}
+    node[shift={(-7mm,-2mm)}]{$N-1$};
+\end{tikzpicture}\hfill
+\begin{minipage}[t]{0.8\linewidth}
+Mola ideal com comprimento natural $L$ com constante elástica $K$, com $N$
+partículas pontuais iguais com massa $m=M/N$, dispostas regularmente ao longo da
+mola.
+\begin{align*}
+  l&=L/(N-1)&&\rightarrow\text{Comprimento de cada segmento}\\
+  k&=K(N-1)&& \rightarrow\text{Constante elástica de cada segmento}\\
+  m&=M/N    &&\rightarrow\text{Massa de cada partícula}
+\end{align*}
+Posições de equilíbrio iniciais:
+\begin{equation*}
+  y_i^0=y_0^0-i\left[l+\left(N-\frac{i+1}{2}\right)\frac{mg}{k}\right],\quad i>0
+\end{equation*}
+\end{minipage}
+Acelerações ($x_i=y_i-y_i^0$):
+\begin{equation}
+  \begin{aligned}
+    \ddot x_0 &=-Ng+\omega^2(x_1-x_0)\\
+    \ddot x_i &= \omega^2(x_{i-1}-2x_i+x_{i+1}),\qquad i=1, \ldots, N-2\\
+    \ddot x_{N-1} &=\omega^2(x_{N-2}-x_{N-1})
+  \end{aligned}
+\end{equation}
+Este sistema de equações foi resolvido em Python/Numpy, usando a função
+\texttt{solve\_ivp} da biblioteca SciPy.
 
 \section*{Procedimento experimental}
 
