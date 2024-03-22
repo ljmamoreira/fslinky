@@ -13,9 +13,9 @@
 \tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#5, amplitude=2.5mm,coil}]
 \draw [spring] (bola4) -- (bola3);
 %-------------------------------------------------------------Desenhar as Bolas------------------------------------------------------------%
-\draw [fill=white] (bola2) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
-\draw [fill=white] (bola3) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
-\draw [fill=white] (bola4) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
+\shade [ball color =white] (bola2) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
+\shade [ball color =white] (bola3) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
+\shade [ball color =white] (bola4) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
 %----------------------------------------------------------Desenhar as Reticências--------------------------------------------------------%
 \node[rectangle,fill=white, minimum width = 2cm, minimum height = 1.1cm] (r) at (reticencias) {};
 \draw (reticencias) node[ultra thick,scale=1]{$\rotatebox{90}{$\cdots$}$} ;
