@@ -140,9 +140,12 @@ sobre o seu comprimento.
 \end{block}
 
 \begin{block}{Procedimento experimental}
-   Foi observada e gravada a queda do conjunto mola e bola para compreender o seu comportamento. O experimento foi realizado de duas maneiras diferentes, com duas bolas e uma mola, e com três bolas, dividindo a mola ao meio. Ambas as execuções foram gravadas em câmara lenta, a uma taxa de 120 frames por segundo, e posteriormente analisadas usando o software Tracker.
-    \input{images/figure1}
- A constante elástica tanto para a mola completa quanto para a metade da mola foi determinada por meio de outro experimento. Com esses resultados em mãos, os valores teóricos foram calculados utilizando o Python e comparados com os resultados experimentais obtidos pelo Tracker. \emph{(mais informação no código QR)}
+Para verificar a validade das soluções obtidas numericamente, estudou-se o movimento de queda de uma mola de aço (slinky) com bolas de ténis dispostas regularmente na mola. Esse movimento foi filmado a 120 fps e a posição das bolas foi obtida fotograma a fotograma usando o programa Tracker \cite{Tracker}. Verificou-se um bom acordo entre os resultados númericos e os valores observados deste modo 
+
+
+%   Foi observada e gravada a queda do conjunto mola e bola para compreender o seu comportamento. O experimento foi realizado de duas maneiras diferentes, com duas bolas e uma mola, e com três bolas, dividindo a mola ao meio. Ambas as execuções foram gravadas em câmara lenta, a uma taxa de 120 frames por segundo, e posteriormente analisadas usando o software Tracker.
+%    \input{images/figure1}
+% A constante elástica tanto para a mola completa quanto para a metade da mola foi determinada por meio de outro experimento. Com esses resultados em mãos, os valores teóricos foram calculados utilizando o Python e comparados com os resultados experimentais obtidos pelo Tracker. \emph{(mais informação no código QR)}
 \end{block}
 
 % -------------------------------
@@ -161,6 +164,7 @@ sobre o seu comprimento.
 % -------------------------------
 
 \begin{block}{Resultados}
+Na figura estão representados gráficos da posição calculada e observada de cada massa como funções do tempo.
 \vspace{1cm}
    \begin{figure}
    \centering
@@ -197,7 +201,7 @@ sobre o seu comprimento.
 			\addplot[p6, smooth, thick] {0.12706810953816955+0.49592093161308015*x^6-7.2082611722205305*x^5+2.1342076920531725*x^4-0.311431870599336*x^3+0.02131369465598449*x^2-0.0005348245618400737*x+1.449321886986526e-06};
            \addlegendentry[UBI]{massa 2}	
 			
-			\addplot[mylightgreen, dotted, thick] {2.45082666-5.52077707e-01*(x+0.05)+3.43475522e+01*(x+0.05)^2-7.74480255e+02*(x+0.05)^3+7.67559430e+03*(x+0.05)^4-4.78466157e+04*(x+0.05)^5+1.85156584e+05*(x+0.05)^6-4.25893494e+05*(x+0.05)^7+5.29402858e+05*(x+0.05)^8-2.72302397e+05*(x+0.05)^9};%lab
+			\addplot[mylightgreen, loosely dotted, line width=1mm] {2.45082666-5.52077707e-01*(x+0.05)+3.43475522e+01*(x+0.05)^2-7.74480255e+02*(x+0.05)^3+7.67559430e+03*(x+0.05)^4-4.78466157e+04*(x+0.05)^5+1.85156584e+05*(x+0.05)^6-4.25893494e+05*(x+0.05)^7+5.29402858e+05*(x+0.05)^8-2.72302397e+05*(x+0.05)^9};%lab
 			
            
            
