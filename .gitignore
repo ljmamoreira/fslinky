@@ -6,13 +6,11 @@
 *.nav
 *.out
 *.snm
-*.MP4
 *_latexmk
 *.fls
 *synctex*
 *ipynb_checkpoints
 misc
-videos
 *.blg
 *.nav
 *.out
