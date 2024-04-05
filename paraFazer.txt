@@ -1,0 +1,12 @@
+PARA FAZER
+
+2024-04-05
+==========
+João: acrescentar escala nos eixos verticais dos gráficos
+João: tirar o fator de escala ".10^{-2}$" dos gráficos
+Zé: fazer gráficos com duas bolas
+Zé: calcular aceleração do CM com e sem mola
+Zé: refazer o Procedimento experimental, acrescentando info sobre mola e bolas
+
+
+
