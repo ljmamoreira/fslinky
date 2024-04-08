@@ -7,29 +7,31 @@
 \usetikzlibrary{decorations.pathmorphing,patterns}
 \begin{document}
 \section*{Motivação / Introdução}
-Vários vídeos disponíveis na plataforma YouTube mostram a queda de uma mola
-elástica a partir de uma situação de repouso estático em que ela se encontra na
-vertical, suspensa de uma das suas extremidades. Estes vídeos são interessantes
-poque mostram a extremidade inferior da mola como que a aguardar que a
-extremidade superior a atinja, antes de começar o seu movimento de queda
-propriamente dito. 
-
-A explicação deste comportamento é dada pela teoria da elasticidade de um meio
-contínuo. A onda de deformação gerada na extremidade superior da mola quando é
-solta propaga-se longitudinalmente com uma velocidade finita, e só quando atinge
-a extremidade inferior, alterando aí o estado de deformação inicial, se altera o
-equilíbrio de forças (peso e força elástica) que mantinham esta extremidade em
-repouso.
-
-Claramente, o modelo elementar de mola ideal, em que se despreza a sua massa, é
-insuficiente para enquadrar esta explicação, uma vez que não tendo massa, (1)~a
-mola não fica sujeita à gravidade, ou seja, não cai e (2)~a sua deformação é
-sempre uniforme, pelo que a força sobre a extremidade inferior altera-se
-instantaneamente assim que a extremidade superior inicia a sua queda. 
-
-Com este trabalho, tentou-se descrever o movimento de queda das molas reais
-usando o modelo de mola ideal, com massas iguais distribuídas uniformemente
-sobre o seu comprimento.
+  Vários vídeos disponíveis na plataforma YouTube mostram a queda de uma mola
+  elástica a partir de uma situação de repouso estático em que ela se encontra
+  na vertical, suspensa de uma das suas extremidades. Estes vídeos são
+  interessantes poque mostram a extremidade inferior da mola como que a aguardar
+  que a extremidade superior a atinja, antes de começar o seu movimento de queda
+  propriamente dito. 
+	
+  A explicação deste comportamento é dada pela teoria da elasticidade de um meio
+  contínuo. A onda de deformação gerada na extremidade superior da mola quando é
+  solta propaga-se longitudinalmente com uma velocidade finita, e só quando
+  atinge a extremidade inferior, alterando aí o estado de deformação inicial, se
+  modifica o equilíbrio de forças (peso e força elástica) que mantinham esta
+  extremidade em repouso.
+	
+  Claramente, o modelo elementar de mola ideal, em que se despreza a sua massa,
+  é insuficiente para enquadrar esta explicação, uma vez que não tendo massa,
+  (1)~a mola não fica sujeita à gravidade, ou seja, não cai e (2)~a sua
+  deformação é sempre uniforme, pelo que a força sobre a extremidade inferior
+  altera-se instantaneamente assim que a extremidade superior inicia a sua
+  queda. No entanto, será que um sistema de massas pontuais ligadas por molas
+  ideiais 
+	
+  Com este trabalho, tentou-se descrever o movimento de queda das molas reais
+  usando o modelo de mola ideal, com massas iguais distribuídas uniformemente
+  sobre o seu comprimento.
 
 \section*{Formalismo}
 \begin{tikzpicture}[baseline=(current bounding box.north),scale=0.9]
@@ -91,6 +93,12 @@ Este sistema de equações foi resolvido em Python/Numpy, usando a função
 \texttt{solve\_ivp} da biblioteca SciPy.
 
 \section*{Procedimento experimental}
+Para verificar a validade das soluções obtidas numericamente, estudou-se o
+movimento de queda de uma mola de aço (slinky) com bolas de ténis dispostas
+regularmente ao longo do seu comprimento. Esse movimento foi filmado a 120 fps e
+a posição das bolas foi obtida fotograma a fotograma usando o programa Tracker
+\cite{Tracker}. Verificou-se um bom acordo entre os resultados númericos e os
+valores observados deste modo 
 
 \section*{Resultados}
 Na Figura A estão representados gráficos da posição calculada e observada de
