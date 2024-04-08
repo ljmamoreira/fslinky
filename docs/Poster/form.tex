@@ -43,12 +43,12 @@ Posições de equilíbrio iniciais:
 \begin{equation*}
   y_i^0=y_0^0-i\left[l+\left(N-\frac{i+1}{2}\right)\frac{mg}{k}\right],\quad i>0
 \end{equation*}
-\end{minipage}\\[1cm]
 Acelerações ($x_i=y_i-y_i^0$):
   \begin{align*}
     \ddot x_0 &=-Ng+\omega^2(x_1-x_0)\\
     \ddot x_i &= \omega^2(x_{i-1}-2x_i+x_{i+1}),\qquad i=1, \ldots, N-2\\
     \ddot x_{N-1} &=\omega^2(x_{N-2}-x_{N-1})
   \end{align*}
+\end{minipage}\\[1cm]
 Este sistema de equações foi resolvido em Python/Numpy, usando a função
 \texttt{solve\_ivp} da biblioteca SciPy.
