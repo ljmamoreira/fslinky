@@ -1,4 +1,4 @@
-\newcommand{\mola}[5]%Quanto menor for o valor 3,4 e 5 dado à função mais comprimida estará a mola%
+\newcommand{\mola}[4]%Quanto menor for o valor 3,4 e 5 dado à função mais comprimida estará a mola%
 {
 %------------------------------------------------------------Pontos Importantes------------------------------------------------------------%
 \coordinate (bola1) at (0,{#1});
@@ -8,24 +8,26 @@
 \coordinate (reticencias) at (0,-8);
 %-------------------------------------------------------------Desenhar as Molas------------------------------------------------------------%
 \tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#3, amplitude=2.5mm,coil}]
-\tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#4, amplitude=2.5mm,coil}]
+\draw [spring] (bola2) -- (bola1);
 \draw [spring] (bola3) -- (bola2);
-\tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#5, amplitude=2.5mm,coil}]
+\tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#4, amplitude=2.5mm,coil}]
 \draw [spring] (bola4) -- (bola3);
 %-------------------------------------------------------------Desenhar as Bolas------------------------------------------------------------%
+\shade [ball color =white] (bola1) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
 \shade [ball color =white] (bola2) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
 \shade [ball color =white] (bola3) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
 \shade [ball color =white] (bola4) circle (.5) node[draw=none,inner sep = 0,scale=2,text=black]{};
 %----------------------------------------------------------Desenhar as Reticências--------------------------------------------------------%
 \node[rectangle,fill=white, minimum width = 2cm, minimum height = 1.1cm] (r) at (reticencias) {};
-\draw (reticencias) node[ultra thick,scale=1]{$\rotatebox{90}{$\cdots$}$} ;
+\draw (reticencias) node[ultra thick,scale=1,yshift=.05cm]{$\rotatebox{90}{$\cdots$}$} ;
 }
 \begin{minipage}{0.22\colwidth}
 \resizebox{.2\colwidth}{!}{
 \begin{tikzpicture}[scale=1, every node/.style={scale=.6}]
-\mola{2}{-2}{3mm}{3mm}{3mm}
-\node[anchor=west] at (-1.5,-2) {\textbf{\boldmath$0$}};
-\node[anchor=west] at (-1.5,-6) {\textbf{\boldmath$1$}};
+\mola{2}{-2}{3mm}{3mm}
+\node[anchor=west] at (-1.5,2) {\textbf{\boldmath$0$}};
+\node[anchor=west] at (-1.5,-2) {\textbf{\boldmath$1$}};
+\node[anchor=west] at (-1.5,-6) {\textbf{\boldmath$2$}};
 \node[xshift=-1.5cm,anchor=west] at (-1.5,-10) {\textbf{\boldmath$N-1$}};
 \draw[thick,->] (2,-10) -- (2,-8) node[draw=none,inner sep = 0,scale=1.5,xshift=.4cm,text=black]{$y$};
 \end{tikzpicture}}
