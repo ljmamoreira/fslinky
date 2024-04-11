@@ -17,3 +17,4 @@ misc
 *.snm
 *.toc
 *.swp
+!poster.pdf
