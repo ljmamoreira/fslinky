@@ -3,9 +3,9 @@
 %------------------------------------------------------------Pontos Importantes------------------------------------------------------------%
 \coordinate (bola1) at (0,{#1});
 \coordinate (bola2) at (0,{#2}); 
-\coordinate (bola3) at (0,-6);
-\coordinate (bola4) at (0,-10);
-\coordinate (reticencias) at (0,-8);
+\coordinate (bola3) at (0,-4);
+\coordinate (bola4) at (0,-8);
+\coordinate (reticencias) at (0,-6);
 %-------------------------------------------------------------Desenhar as Molas------------------------------------------------------------%
 \tikzstyle{spring}=[thick,decorate,decoration={aspect=.5, segment length=#3, amplitude=2.5mm,coil}]
 \draw [spring] (bola2) -- (bola1);
@@ -24,12 +24,12 @@
 \begin{minipage}{0.22\colwidth}
 \resizebox{.2\colwidth}{!}{
 \begin{tikzpicture}[scale=1, every node/.style={scale=.6}]
-\mola{2}{-2}{3mm}{3mm}
-\node[anchor=west] at (-1.5,2) {\textbf{\boldmath$0$}};
-\node[anchor=west] at (-1.5,-2) {\textbf{\boldmath$1$}};
-\node[anchor=west] at (-1.5,-6) {\textbf{\boldmath$2$}};
-\node[xshift=-1.5cm,anchor=west] at (-1.5,-10) {\textbf{\boldmath$N-1$}};
-\draw[thick,->] (2,-10) -- (2,-8) node[draw=none,inner sep = 0,scale=1.5,xshift=.4cm,text=black]{$y$};
+\mola{3}{-1.5}{3mm}{3mm}
+\node[anchor=west] at (-1.5,3) {\textbf{\boldmath$0$}};
+\node[anchor=west] at (-1.5,-1.5) {\textbf{\boldmath$1$}};
+\node[anchor=west] at (-1.5,-4) {\textbf{\boldmath$2$}};
+\node[xshift=-1.5cm,anchor=west] at (-1.5,-8) {\textbf{\boldmath$N-1$}};
+\draw[thick,->] (2,-8) -- (2,-6) node[draw=none,inner sep = 0,scale=1.5,xshift=.4cm,text=black]{$y$};
 \end{tikzpicture}}
 \end{minipage}
 \begin{minipage}{0.7\colwidth}
