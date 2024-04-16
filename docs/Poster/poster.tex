@@ -143,16 +143,50 @@ observados experimentalmente, o que valida o modelo.
 % Secção: Resultados
 % -------------------------------
 \begin{block}{Resultados}
-	Na Figura~\ref{fig:a}  estão representados gráficos da posição calculada e
+Na Figura~\ref{fig:a}  estão representados gráficos da posição calculada e
 observada de cada massas como funções do tempo, para os casos $N=2$ e $N=3$. É
 patente o bom acordo entre os valores calculados e observados. As discrepâncias
 mais significativas ocorrem no final do intervalo de tempo representado, quando
 as espiras da mola se comprimem umas contra as outras, devido ao movimento de
 queda mais rápido das massas mais acima, efeito que altera a dinâmica puramente
 elástica e gravítica do modelo numérico.
+
+É interessante notar a discrepância no movimento da massa na extremidade
+da mola, mais patente no caso $N=2$ que para $N=3$. Cremos que esta discrepância
+está relacionada com o modelo de mola ideal. Com apenas duas bolas de ténis
+fixadas na mola, é mais discutível considerar-se desprezável a sua massa. Logo,
+é mais expectável que o modelo adotado não de adeque tão precisamente ao
+comportamento do sistema estudado.
 	
 	\vspace{1cm}
 	\begin{figure}
+	\begin{tikzpicture}
+			\begin{axis}[
+			                %height=,
+			                width=.4\colwidth,
+			                % domain=52:60,
+			                xmin=0,xmax=.4,
+			                xlabel=\textcolor{UBI}{tempo $(\unit{\second})$},
+			                ymin=0,ymax=2.57,
+			                scaled ticks = false,
+			                %yticklabel style={/pgf/number format/.cd,fixed zerofill,precision=2},
+			                ylabel=\textcolor{UBI}{Posição $(\unit{\metre})$},
+					 ytick={0,0.5,1,1.5,2,2.5},yticklabels={0,0.5,1,1.5,2,2.5},
+					 xtick={0,0.1,0.2,0.3,0.4},xticklabels={0,0.1,0.2,0.3,0.4},
+			                %grid=both,major grid style={line width=.2pt,draw=#color},
+			                %samples=#,
+			                %every axis/.append style={axis line style={color}, tick style={color}},
+			                legend style={draw=none},
+			                legend cell align={left},
+			                %legend pos= south west,
+			                every axis/.append style={axis line style={UBI}, tick style={UBI}}
+			]
+			\addplot[mylightgreen, loosely dotted, line width=1mm] table[x = t, y = X1] {Lab.dat};
+			\addlegendentry[UBI]{Massa $0$};
+			\addplot[p5, loosely dotted, line width=1mm] table[x = t, y = X2] {Lab.dat};
+			\addlegendentry[UBI]{Massa $1$};
+			\end{axis}
+		\end{tikzpicture}
 		\begin{tikzpicture}
 			\begin{axis}[
 			%height=,
@@ -189,33 +223,6 @@ elástica e gravítica do modelo numérico.
 			\end{axis}
 		\end{tikzpicture}
 		%\hfill
-		\begin{tikzpicture}
-			\begin{axis}[
-			                %height=,
-			                width=.4\colwidth,
-			                % domain=52:60,
-			                xmin=0,xmax=.4,
-			                xlabel=\textcolor{UBI}{tempo $(\unit{\second})$},
-			                ymin=0,ymax=2.57,
-			                scaled ticks = false,
-			                %yticklabel style={/pgf/number format/.cd,fixed zerofill,precision=2},
-			                ylabel=\textcolor{UBI}{Posição $(\unit{\metre})$},
-					 ytick={0,0.5,1,1.5,2,2.5},yticklabels={0,0.5,1,1.5,2,2.5},
-					 xtick={0,0.1,0.2,0.3,0.4},xticklabels={0,0.1,0.2,0.3,0.4},
-			                %grid=both,major grid style={line width=.2pt,draw=#color},
-			                %samples=#,
-			                %every axis/.append style={axis line style={color}, tick style={color}},
-			                legend style={draw=none},
-			                legend cell align={left},
-			                %legend pos= south west,
-			                every axis/.append style={axis line style={UBI}, tick style={UBI}}
-			]
-			\addplot[mylightgreen, loosely dotted, line width=1mm] table[x = t, y = X1] {Lab.dat};
-			\addlegendentry[UBI]{Massa $0$};
-			\addplot[p5, loosely dotted, line width=1mm] table[x = t, y = X2] {Lab.dat};
-			\addlegendentry[UBI]{Massa $1$};
-			\end{axis}
-		\end{tikzpicture}
 		\caption{\label{fig:a} Deslocamentos a partir das posições de equilíbrio na queda de uma mola com 3 e 2 massas, a tracejado estão as curvas observadas e a contínuo estão as soluções numéricas.}
 	\end{figure}
 Na Figura~\ref{fig:b} está representada a posição da massa na extremidade inferior da
