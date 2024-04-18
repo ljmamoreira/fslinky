@@ -164,7 +164,7 @@ comportamento do sistema estudado.
 			\begin{axis}[
 			                %height=,
 			                width=.4\colwidth,
-			                % domain=52:60,
+			                domain=0:1,
 			                xmin=0,xmax=.4,
 			                xlabel=\textcolor{UBI}{tempo $(\unit{\second})$},
 			                ymin=0,ymax=2.57,
@@ -179,12 +179,16 @@ comportamento do sistema estudado.
 			                legend style={draw=none},
 			                legend cell align={left},
 			                %legend pos= south west,
+			                ticklabel style={UBI},
 			                every axis/.append style={axis line style={UBI}, tick style={UBI}}
 			]
-			\addplot[mylightgreen, loosely dotted, line width=1mm] table[x = t, y = X1] {Lab.dat};
+			\addplot[mypurple, smooth, thick] {-1621.92513511252*(x+0.055)^18 + 6121.49497805735*(x+0.055)^17 - 10620.203611305*(x+0.055)^16 + 11227.0136638144*(x+0.055)^15 - 8082.19566831113*(x+0.055)^14 + 4194.35994448389*(x+0.055)^13 - 1620.30359677421*(x+0.055)^12 + 474.390100098321*(x+0.055)^11 - 106.32394286827*(x+0.055)^10 + 18.1852651811809*(x+0.055)^9 - 1.45808049934885*(x+0.055)^8 + 0.232794509696558*(x+0.055)^7 - 3.30894854290934*(x+0.055)^6 + 0.000874488766885422*(x+0.055)^5 + 6.35364826832974*(x+0.055)^4 + 7.05060570450829e-7*(x+0.055)^3 - 9.81000000909166*(x+0.055)^2 - 1.32794452125934e-11*(x+0.055) + 2.53358200000001};
 			\addlegendentry[UBI]{Massa $0$};
-			\addplot[p5, loosely dotted, line width=1mm] table[x = t, y = X2] {Lab.dat};
+			\addplot[p6, smooth, thick] {1634.53401862378*(x+0.055)^18 - 6167.3076951656*(x+0.055)^17 + 10696.4801165736*(x+0.055)^16 - 11304.1277205007*(x+0.055)^15 + 8135.07552593306*(x+0.055)^14 - 4220.38221968951*(x+0.055)^13 + 1629.78555495354*(x+0.055)^12 - 476.992106082573*(x+0.055)^11 + 106.86554864998*(x+0.055)^10 - 18.2707144835056*(x+0.055)^9 + 1.46821509336611*(x+0.055)^8 - 0.233683127949648*(x+0.055)^7 + 3.30900455585977*(x+0.055)^6 - 0.000876914247492155*(x+0.055)^5 - 6.35364820157578*(x+0.055)^4 - 7.06060625657539e-7*(x+0.055)^3 + 9.09672372349551e-9*(x+0.055)^2 + 1.32985411272606e-11*(x+0.055) + 0.659303499999993};
 			\addlegendentry[UBI]{Massa $1$};
+			\addplot[mydeeppurple,loosely dotted, line width=1mm] table[x = t, y = X1] {Lab.dat};
+			\addplot[p5, loosely dotted, line width=1mm] table[x = t, y = X2] {Lab.dat};
+			
 			\end{axis}
 		\end{tikzpicture}
 		\begin{tikzpicture}
@@ -208,6 +212,7 @@ comportamento do sistema estudado.
 			samples=400,
 			%ticks=none,
 			%ylabel=,
+			ticklabel style={UBI},
 			every axis/.append style={axis line style={UBI}, tick style={UBI}}
 			]	
 			\addplot[mylime, smooth, thick] {+2.4508266637798486+1.92551978e-06-7.08288771e-04*x-1.46868493e+01*x^2-4.09976421e-01*x^3+2.18585827e+01*x^4-9.39435949e+00*x^5-6.34499469e+00*x^6};
@@ -222,7 +227,6 @@ comportamento do sistema estudado.
 			\addplot[p5, loosely dotted, line width=1mm] {+5919.067897122547*(x+0.05)^9-11617.379837153167*(x+0.05)^8+9381.76346394042*(x+0.05)^7-4036.0015719443286*(x+0.05)^6+992.5740054163633*(x+0.05)^5-138.15718216106012*(x+0.05)^4+9.591644806308794*(x+0.05)^3-0.1774404113040594*(x+0.05)^2+0.019261796302454434*(x+0.05)+0.12706810953816955};        
 			\end{axis}
 		\end{tikzpicture}
-		%\hfill
 		\caption{\label{fig:a} Deslocamentos a partir das posições de equilíbrio na queda de uma mola com 3 e 2 massas, a tracejado estão as curvas observadas e a contínuo estão as soluções numéricas.}
 	\end{figure}
 Na Figura~\ref{fig:b} está representada a posição da massa na extremidade inferior da
@@ -252,6 +256,7 @@ densidade de massa finita das molas reais.
 			                legend style={draw=none},
 			                legend cell align={left},
 			                legend pos= south west,
+			                ticklabel style={UBI},
 			                every axis/.append style={axis line style={UBI}, tick style={UBI}}
 			]
 			\addplot[p5, thick] table[x = T, y = X1] {1.dat};
@@ -264,7 +269,7 @@ densidade de massa finita das molas reais.
 			\addlegendentry[UBI]{$N=5$};
 			\end{axis}
 		\end{tikzpicture}
-		\caption{\label{fig:b} legenda por fazer}
+		\caption{\label{fig:b} Posição da massa na extremidade inferior da mola, em função do tempo, para diferentes valores de $N$.}
 	\end{figure}
 \end{block}
 % -------------------------------
