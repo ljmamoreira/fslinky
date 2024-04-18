@@ -4,11 +4,16 @@ PARA FAZER
 ==========
 João: acrescentar escala nos eixos verticais dos gráficos FEITO
 João: tirar o fator de escala ".10^{-2}$" dos gráficos FEITO
-Zé: fazer gráficos com duas bolas FEITO(?)
-Zé: calcular aceleração do CM com e sem mola
+Zé: fazer gráficos com duas bolas FEITO
+Zé: calcular aceleração do CM com (POR FAZER) e sem mola (FEITO)
 Zé: refazer o Procedimento experimental, acrescentando info sobre mola e bolas
-
 
 2024-04-08
 ==========
 João: acrescentar uma bola à figura das molas FEITO
+
+2024-04-16
+Zé: Decidir como apresentar e comentar a discrepância na aceleração do CM
+João: Completar o gráfico das duas bolas.
+Zé ou João: Legenda da Figura 2
+Zé: Há maneira de estimar a discrepância na aceleração do CM considerando a massa da mola e das bolas?
