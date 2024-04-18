@@ -14,6 +14,6 @@ João: acrescentar uma bola à figura das molas FEITO
 
 2024-04-16
 Zé: Decidir como apresentar e comentar a discrepância na aceleração do CM
-João: Completar o gráfico das duas bolas.
-Zé ou João: Legenda da Figura 2
+João: Completar o gráfico das duas bolas. FEITO
+Zé ou João: Legenda da Figura 2. FEITO
 Zé: Há maneira de estimar a discrepância na aceleração do CM considerando a massa da mola e das bolas?
