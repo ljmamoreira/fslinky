@@ -16,9 +16,11 @@
 \usepackage{anyfontsize}
 \usepackage{xcolor}
 \usepackage{adjustbox}
+\usepackage{multicol}
 \usepackage{siunitx}
 \usepackage{caption}
 \usepackage{tikz}
+\usepackage{multicol}
 \usepackage[most]{tcolorbox}
 \definecolor{p1}{HTML}{caf0f8}
 \definecolor{p2}{HTML}{ade8f4}
@@ -137,6 +139,7 @@ Verifica-se no geral um bom acordo entre os resultados numéricos e os valores
 observados experimentalmente, o que valida o modelo.
 \end{block}
 \end{column}
+
 \separatorcolumn
 \begin{column}{\colwidth}
 % -------------------------------
@@ -157,6 +160,15 @@ está relacionada com o modelo de mola ideal. Com apenas duas bolas de ténis
 fixadas na mola, é mais discutível considerar-se desprezável a sua massa. Logo,
 é mais expectável que o modelo adotado não se adeque tão precisamente ao
 comportamento do sistema estudado.
+
+Esta conjetura é apoiada por cálculos do valor da aceleração do centro de massa
+do conjunto das bolas. O valor obtido a partir dos dados laboratoriais é
+naturalmente inferior a $g$, uma vez que não inclui a contribuição do movimento
+das molas. De facto, os valores obtidos são $8,27$\,m/s$^2$ para $N=2$ e
+$9,11$\,m/s$^2$ para $N=3$.  Nota-se que esta ``discrepância'' é tanto menor
+quanto mais bolas dispomos ao longo da mola, ou seja, quanto menor for a
+importância relativa da massa da mola; ou seja ainda, quanto mais ``ideal'' ela
+for.
 	
 	\vspace{1cm}
 	\begin{figure}
@@ -180,7 +192,8 @@ comportamento do sistema estudado.
 			                legend cell align={left},
 			                %legend pos= south west,
 			                ticklabel style={UBI},
-			                every axis/.append style={axis line style={UBI}, tick style={UBI}}
+			                every axis/.append style={axis line style={UBI}, tick style={UBI}},
+			                samples=800
 			]
 			\addplot[mypurple, smooth, thick] {-1621.92513511252*(x+0.055)^18 + 6121.49497805735*(x+0.055)^17 - 10620.203611305*(x+0.055)^16 + 11227.0136638144*(x+0.055)^15 - 8082.19566831113*(x+0.055)^14 + 4194.35994448389*(x+0.055)^13 - 1620.30359677421*(x+0.055)^12 + 474.390100098321*(x+0.055)^11 - 106.32394286827*(x+0.055)^10 + 18.1852651811809*(x+0.055)^9 - 1.45808049934885*(x+0.055)^8 + 0.232794509696558*(x+0.055)^7 - 3.30894854290934*(x+0.055)^6 + 0.000874488766885422*(x+0.055)^5 + 6.35364826832974*(x+0.055)^4 + 7.05060570450829e-7*(x+0.055)^3 - 9.81000000909166*(x+0.055)^2 - 1.32794452125934e-11*(x+0.055) + 2.53358200000001};
 			\addlegendentry[UBI]{Massa $0$};
@@ -288,8 +301,13 @@ densidade de massa finita das molas reais.
 % Secção: Referências
 % -------------------------------
 \begin{block}{Referências}
-    \nocite{*}
-    \footnotesize{\bibliographystyle{plainurl}\bibliography{poster}}
+\begin{multicols}{2}
+    \footnotesize
+    \bibliographystyle{plainurl}
+    \bibliography{poster}
+\end{multicols}
+%    \nocite{*}
+%    \footnotesize{\bibliographystyle{plainurl}\bibliography{poster}}
 \end{block}
 % -------------------------------
 % Section: Portfolio
