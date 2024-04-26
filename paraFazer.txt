@@ -20,4 +20,4 @@ Zé: Há maneira de estimar a discrepância na aceleração do CM considerando a
 
 2024-04-23
 ==========
-Zé: refazer Procedimento Experimental, com info sobre mola e bolas, e cálculo da incerteza no valor da constante elástica.
+Zé: refazer Procedimento Experimental, com info sobre mola e bolas, e cálculo da incerteza no valor da constante elástica. FEITO

@@ -92,18 +92,17 @@ Este sistema de equações foi resolvido em Python/Numpy, usando a função
 \section*{Procedimento experimental}
 Para verificar a validade das soluções obtidas numericamente, estudou-se o
 movimento de queda de uma mola de aço (slinky) com bolas de ténis dispostas
-regularmente ao longo do seu comprimento. 
-As bolas de ténis usadas tinham massa 
-A massa da mola usada tem o valor 37,5\,g; determinou-se a sua constante
-elástica a partir do seu elongamento sob diferentes tensões, tendo-se obtido o
-valor de 0,499\,N/mol.
-Esse movimento foi filmado a 120 fps e
-a posição das bolas foi obtida fotograma a fotograma usando o programa Tracker
-\cite{Tracker}. Analizaram-se os casos $N=2$ (uma massa em cada extremidade da
-mola) e $N=3$ (a massa adicional no centro da mola). Os resultados estão
-apresentados na Figura~\ref{fig:a}.
+regularmente ao longo do seu comprimento.  As bolas de ténis usadas têm massa
+\textbf{\color{red}????\,kg}.  A massa da mola usada tem o valor $37,5\pm1$\,g;
+determinou-se a sua constante elástica por regressão linear dos valores do
+elongamento sob diferentes tensões, tendo-se obtido o valor de
+$0,44\pm0,01$\,N/m.  O movimento de queda foi filmado a 120 fps e a posição das
+bolas foi obtida fotograma a fotograma usando o programa Tracker \cite{Tracker}.
+Analizaram-se os casos $N=2$ (uma massa em cada extremidade da mola) e $N=3$ (a
+massa adicional no centro da mola). Os resultados estão apresentados na
+Figura~\ref{fig:a}.
 
-Verifica-se no geral um bom acordo entre os resultados numéricos e os valores
+Verifica-se genericamente bom acordo entre os resultados numéricos e os valores
 observados experimentalmente, o que valida o modelo.
 
 \section*{Resultados}
@@ -142,7 +141,12 @@ densidade de massa finita das molas reais.
 \section*{Conclusões}
 
 %-------------------------------------------------------------------------------
-\begin{figure}
+\begin{figure}[b]
   \caption{\label{fig:a}}
 \end{figure}
+%-------------------------------------------------------------------------------
+\begin{thebibliography}{99}
+  \bibitem{Tracker} { }
+\end{thebibliography}
+%-------------------------------------------------------------------------------
 \end{document}
