@@ -55,14 +55,14 @@
     coordinate[yshift=-1.65mm](b);
   \draw [spring={1.0mm}{0mm}] ([yshift=-1.8mm]b)-- ++(0,-0.61) coordinate (c);
   \path (a) node[circle, draw, fill=white,inner sep=1]{\rule{0mm}{3mm}}
-    node[left, inner sep=8]{0};
+    node[left, inner sep=8]{1}; %<<<<<<<<<
   \path (b) node[circle, draw, fill=white,inner sep=1]{\rule{0mm}{3mm}}
-    node[left, inner sep=8]{1};
+    node[left, inner sep=8]{2}; %<<<<<<<<<
   %\fill (c) circle(0.1);
   \path (c) node[inner sep=0,below]{$\vdots$};
   \draw [spring={0.7mm}{1mm}] (0,-3.75) -- ++(0,-0.405)
     node[below,circle,fill=white, draw, inner sep=0]{\rule{0mm}{3mm}}
-    node[shift={(-7mm,-2mm)}]{$N-1$};
+    node[shift={(-7mm,-2mm)}]{$N$}; %<<<<<<<<<
 \end{tikzpicture}\hfill
 \begin{minipage}[t]{0.8\linewidth}
 Mola ideal com comprimento natural $L$ com constante elástica $K$, com $N$
@@ -75,15 +75,19 @@ mola.
 \end{align*}
 Posições de equilíbrio iniciais:
 \begin{equation*}
-  y_i^0=y_0^0-i\left[l+\left(N-\frac{i+1}{2}\right)\frac{mg}{k}\right],\quad i>0
+  %y_i^0=y_0^0-i\left[l+\left(N-\frac{i+1}{2}\right)\frac{mg}{k}\right],\quad i>0
+  y_i^0=y_1^0-(i-1)\left[l+\left(N-\frac{i}{2}\right)\frac{mg}{k}\right],
+  \quad i>1
 \end{equation*}
 \end{minipage}
-Acelerações ($x_i=y_i-y_i^0$):
+Acelerações ($x_i=y_i-y_i^0$, $\omega^2=k/m$):
 \begin{equation}
   \begin{aligned}
-    \ddot x_0 &=-Ng+\omega^2(x_1-x_0)\\
-    \ddot x_i &= \omega^2(x_{i-1}-2x_i+x_{i+1}),\qquad i=1, \ldots, N-2\\
-    \ddot x_{N-1} &=\omega^2(x_{N-2}-x_{N-1})
+    %\ddot x_0 &=-Ng+\omega^2(x_1-x_0)\\
+    \ddot x_1 &=-Ng-\omega^2(x_1-x_2)\\
+    \ddot x_i &= \omega^2(x_{i-1}-2x_i+x_{i+1}),\qquad i=2, \ldots, N-1\\
+    %\ddot x_{N-1} &=\omega^2(x_{N-2}-x_{N-1})
+    \ddot x_{N} &=\omega^2(x_{N-1}-x_{N})
   \end{aligned}
 \end{equation}
 Este sistema de equações foi resolvido em Python/Numpy, usando a função
@@ -139,6 +143,20 @@ comportamento de queda das molas demonstrado nos vídeos referidos resulta da
 densidade de massa finita das molas reais.
 
 \section*{Conclusões}
+O movimento de queda de molas elásticas reais ilustrado nos vídeos referidos
+pode ser descrito aproximadamente usando um modelo de mola ideal com massas
+pontuais dispostas regularmente ao longo do seu comprimento. Estas massas são
+indispensáveis para dotar o modelo de mola ideal com peso e inércia e, assim,
+promover as molas ideias ao estatuto de objetos dinâmicos.
+
+A descrição do movimento torna-se mais exata quanto maior for o número de massas
+pontuais considerada, o que concorda com a ideia de uma mola real como limite
+contínuo de uma mola ideal com massas pontuais distribuídas ao longo do seu
+comprimento. 
+
+Este problema (com a abordagem que propomos) parece-nos um contexto adequado para
+a ilustracção das teorias de campo como limites continuos de teorias de massas
+pontuais.
 
 %-------------------------------------------------------------------------------
 \begin{figure}[b]
