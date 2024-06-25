@@ -75,6 +75,7 @@
 % ====================
 \footercontent{
   Física 2024 \hfill
+%https://github.com/ljmamoreira/fslinky\hfill
   UBI - Departamento de Física}
 % ====================
 % Logos
@@ -129,7 +130,7 @@
 % -------------------------------
 \begin{block}{Procedimento experimental}
 Para verificar a validade das soluções obtidas numericamente, estudou-se o
-movimento de queda de uma mola de aço (slinky) com bolas de ténis dispostas
+movimento de queda de uma mola de aço com bolas de ténis dispostas
 regularmente ao longo do seu comprimento.  As bolas de ténis usadas têm massa
 $56,6\pm0,1$\,g.  A massa da mola usada tem o valor $37,5\pm0,1$\,g;
 determinou-se a sua constante elástica por regressão linear dos valores do
@@ -182,7 +183,7 @@ quanto mais bolas dispomos ao longo da mola, ou seja, quanto menor for a
 importância relativa da massa da mola; ou seja ainda, quanto mais ``ideal'' ela
 for.
 	
-	\vspace{1cm}
+	\vspace{2cm}
 	\begin{figure}
 	\begin{tikzpicture}
 			\begin{axis}[
@@ -254,12 +255,14 @@ for.
 		\end{tikzpicture}
 		\caption{\label{fig:a} Deslocamentos das massas na queda de uma mola com 2 e 3 massas. A tracejado estão as curvas observadas e a contínuo estão as soluções numéricas.}
 	\end{figure}
+	\vspace{2cm}
 Na Figura~\ref{fig:b} está representada a posição da massa na extremidade inferior da
 mola, como função do tempo, para diferentes números (2, 3, 4 e 5) de massas
 dispostas na mola. Nota-se quanto maior for o número de massas, maior é o
 atraso no início do movimento da última massa. Este facto sugere que o
 comportamento de queda das molas demonstrado nos vídeos referidos resulta da
 densidade de massa finita das molas reais.
+\vspace{2cm}
 	\begin{figure}
 		\begin{tikzpicture}
 			\begin{axis}[
@@ -296,6 +299,7 @@ densidade de massa finita das molas reais.
 		\end{tikzpicture}
 		\caption{\label{fig:b} Posição da massa na extremidade inferior da mola, em função do tempo, para diferentes valores de $N$.}
 	\end{figure}
+	\vspace{2cm}
 \end{block}
 % -------------------------------
 % Secção: Conclusões
@@ -319,23 +323,43 @@ pontuais.
 % -------------------------------
 % Secção: Referências
 % -------------------------------
+%\begin{block}{Referências}
+%\begin{multicols}{2}
+%    \footnotesize
+%    \bibliographystyle{plainurl}
+%    \bibliography{poster}
+%\end{multicols}
+%%    \nocite{*}
+%%    \footnotesize{\bibliographystyle{plainurl}\bibliography{poster}}
+%\end{block}
+% -------------------------------
+% Section: Portfolio
+% -------------------------------
+%\begin{block}{Mais Informações}
+%    \input{images/figure3}
+%\end{block}
+\end{column}
+\separatorcolumn
+\end{columns}
+%\separatorcolumn
+\begin{columns}[t]
+\begin{column}{0.9328981723\paperwidth}
 \begin{block}{Referências}
+\begin{multicols}{2}
 \begin{multicols}{2}
     \footnotesize
     \bibliographystyle{plainurl}
     \bibliography{poster}
 \end{multicols}
-%    \nocite{*}
-%    \footnotesize{\bibliographystyle{plainurl}\bibliography{poster}}
-\end{block}
-% -------------------------------
-% Section: Portfolio
-% -------------------------------
-\begin{block}{Mais Informações}
-    \input{images/figure3}
+    \hfill
+    \begin{figure}
+    \centering
+  \vspace*{-1.45cm}\includegraphics[height=8cm]{images/qrcode2}
+\end{figure}
+%    \input{images/figure3}
+\end{multicols}
 \end{block}
 \end{column}
-\separatorcolumn
 \end{columns}
 \end{frame}
 \end{document}
