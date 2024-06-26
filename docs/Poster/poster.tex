@@ -19,6 +19,7 @@
 \usepackage{multicol}
 \usepackage{siunitx}
 \usepackage{caption}
+\usepackage{url}
 \usepackage{icomma}
 \usepackage{tikz}
 \usepackage{multicol}
@@ -68,7 +69,7 @@
 % Title
 % ====================
 \title{Queda de uma mola ideal suspensa com massas distribuídas regularmente}
-\author{José Amoreira \inst{1,2,3} \and João Santos \inst{2} \and João Esteves \inst{2}}
+\author{João Santos \inst{2} \and João Esteves \inst{2} \and José Amoreira \inst{1,2,3}}
 \institute[]{\inst{1} Laboratório de Instrumentação e Física Experimental de Partículas \and  \inst{2}Universidade da Beira Interior  \samelineand \inst{3} Centro de Matemática e Aplicações (CMAUBI)}
 % ====================
 % Footer
@@ -346,15 +347,16 @@ pontuais.
 \begin{column}{0.9328981723\paperwidth}
 \begin{block}{Referências}
 \begin{multicols}{2}
-\begin{multicols}{2}
-    \footnotesize
-    \bibliographystyle{plainurl}
+\begin{multicols}{3}
+    \nocite{*}
+    \scriptsize
+    \bibliographystyle{unsrturl}
     \bibliography{poster}
 \end{multicols}
     \hfill
     \begin{figure}
     \centering
-  \vspace*{-1.45cm}\includegraphics[height=8cm]{images/qrcode2}
+  \vspace*{-1.45cm}\hfill\includegraphics[height=8cm]{images/qrcode2}
 \end{figure}
 %    \input{images/figure3}
 \end{multicols}

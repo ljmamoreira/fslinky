@@ -19,3 +19,4 @@ misc
 *.swp
 *.dat
 !poster.pdf
+*.bcf

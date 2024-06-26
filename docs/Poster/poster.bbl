@@ -1,23 +1,34 @@
 \begin{thebibliography}{1}
 
-\bibitem{YouTube2}
-ActionLabShorts.
-\newblock Anti-gravity slinky.
-\newblock URL: \url{https://www.youtube.com/shorts/xlV_DPdu8DI}.
-
 \bibitem{Tracker}
 Open Source~Physics (OSP).
 \newblock Tracker.
 \newblock URL: \url{https://physlets.org/tracker/}.
+
+\bibitem{YouTube}
+Veritasium.
+\newblock Does a falling slinky defy gravity?
+\newblock URL: \url{https://shorturl.at/T1kBC}.
 
 \bibitem{YouTub}
 Adam Shomsky.
 \newblock Slow motion slinky drop 1000fps.
 \newblock URL: \url{https://www.youtube.com/watch?v=8UimHnsWSBc}.
 
-\bibitem{YouTube}
-Veritasium.
-\newblock Does a falling slinky defy gravity?
-\newblock URL: \url{https://www.youtube.com/watch?v=uiyMuHuCFo4}.
+\bibitem{YouTube2}
+ActionLabShorts.
+\newblock Anti-gravity slinky.
+\newblock URL: \url{https://shorturl.at/ujsBK}.
+
+\bibitem{harris2020array}
+Charles R.~Harris et~al.
+\newblock Array programming with {NumPy}.
+\newblock {\em Nature}, 585(7825):357--362, September 2020.
+
+\bibitem{2020SciPy-NMeth}
+Pauli~Virtanen et~al.
+\newblock {{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in
+  Python}.
+\newblock {\em Nature Methods}, 17:261--272, 2020.
 
 \end{thebibliography}
