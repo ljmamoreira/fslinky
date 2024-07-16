@@ -22,3 +22,5 @@ misc
 *.bcf
 *.sty
 *.bbl
+form.tex
+*.vrb

@@ -34,23 +34,15 @@
 \end{minipage}
 \begin{minipage}{0.7\colwidth}
 Descrevemos uma mola ideal com constante elástica $K$, comprimento natural $L$ e massa $M$ como um sistema de $N$ massas $m=M/N$ ligadas sequencialmente por $N-1$ molas ideais com comprimento natural $l=L/(N-1)$ e constante elástica $k=K(N-1)$.\\[1ex]   
-%\begin{align*}
-%  l&=L/(N-1)&&\rightarrow\text{Comprimento de cada segmento}\\
-%  k&=K(N-1)&& \rightarrow\text{Constante elástica de cada segmento}\\
-%  m&=M/N    &&\rightarrow\text{Massa de cada partícula}
-%\end{align*}
 Em equilíbrio estático, as posições das várias massas são dadas por:
 \begin{equation*}
-  %y_i^0=y_0^0-i\left[l+\left(N-\frac{i+1}{2}\right)\frac{mg}{k}\right],\quad i>0
   y_i^0=y_1^0-(i-1)\left[l+\left(N-\frac{i}{2}\right)\frac{mg}{k}\right],
   \quad i>1
 \end{equation*}
 A partir do instante em que se solta a massa na extremidade superior da mola, as acelerações das várias massas são dadas por ($x_i(t)=y_i(t)-y_i^0$, $\ddot x_i=\ddot y_i$, $\omega^2=k/m$):
   \begin{align*}
-    %\ddot x_0 &=-Ng+\omega^2(x_1-x_0)\\
     \ddot x_1 &=-Ng-\omega^2(x_1-x_2)\\
     \ddot x_i &= \omega^2(x_{i-1}-2x_i+x_{i+1}),\qquad i=2, \ldots, N-1\\
-    %\ddot x_{N-1} &=\omega^2(x_{N-2}-x_{N-1})
     \ddot x_{N} &=\omega^2(x_{N-1}-x_{N})
   \end{align*}
 \end{minipage}\\[1cm]
