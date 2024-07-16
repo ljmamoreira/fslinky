@@ -1,60 +1,12 @@
 % !TeX program = lualatex
 \documentclass[final]{beamer}
-% ====================
-% Packages
-% ====================
-\usepackage{url}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[orientation=portrait,size=a0,scale=1.00]{beamerposter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Packages   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{PosterMola}
 \usetheme{gemini}
 \usecolortheme{UBI}
-\usepackage{graphicx}
-\usepackage[portuguese]{babel}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.14}
-\usepackage{anyfontsize}
-\usepackage{xcolor}
-\usepackage{adjustbox}
-\usepackage{multicol}
-\usepackage{siunitx}
-\usepackage{caption}
-\usepackage{url}
-\usepackage{icomma}
-\usepackage{tikz}
-\usepackage{multicol}
-\usepackage[most]{tcolorbox}
-\definecolor{p1}{HTML}{caf0f8}
-\definecolor{p2}{HTML}{ade8f4}
-\definecolor{p3}{HTML}{90e0ef}
-\definecolor{p4}{HTML}{48cae4}
-\definecolor{p5}{HTML}{00b4d8}
-\definecolor{p6}{HTML}{0096c7}
-\definecolor{p7}{HTML}{0077b6}
-\definecolor{p8}{HTML}{023e8a}
-\definecolor{p9}{HTML}{03045e}
-\definecolor{myred}{HTML}{f44336}
-\definecolor{mypink}{HTML}{e81e63}
-\definecolor{mypurple}{HTML}{9c27b0}
-\definecolor{mydeeppurple}{HTML}{673ab7}
-\definecolor{myindigo}{HTML}{3f51b5}
-\definecolor{myblue}{HTML}{2196f3}
-\definecolor{mylightblue}{HTML}{03a9f4}
-\definecolor{mycyan}{HTML}{00bcd4}
-\definecolor{myteal}{HTML}{009688}
-\definecolor{mygreen}{HTML}{4caf50}
-\definecolor{mylightgreen}{HTML}{8bc34a}
-\definecolor{mylime}{HTML}{cddc39}
-\definecolor{myyellow}{HTML}{ffeb3b}
-\definecolor{myamber}{HTML}{ffc107}
-\definecolor{myorange}{HTML}{ff9800}
-\definecolor{mydeeporange}{HTML}{ff5722}
-\definecolor{mybrown}{HTML}{795548}
-\definecolor{mygray}{HTML}{9e9e9e}
-\definecolor{mybluegray}{HTML}{607d8b}
-\definecolor{pag}{HTML}{293133}
-\definecolor{fundo}{RGB}{41, 49, 51}
-\definecolor{UBI}{RGB}{12, 35, 64}
+
 % ====================
 % Lengths
 % ====================
@@ -65,46 +17,43 @@
 \setlength{\sepwidth}{0.025\paperwidth}
 \setlength{\colwidth}{0.45\paperwidth}
 \newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
-% ====================
-% Title
-% ====================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   TÍTULO   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \title{Queda de uma mola ideal suspensa com massas distribuídas regularmente}
 \author{João Santos \inst{2} \and João Esteves \inst{2} \and José Amoreira \inst{1,2,3}}
-\institute[]{\inst{1} Laboratório de Instrumentação e Física Experimental de Partículas \and  \inst{2}Universidade da Beira Interior  \samelineand \inst{3} Centro de Matemática e Aplicações (CMAUBI)}
-% ====================
-% Footer
-% ====================
+\institute[]{\inst{1} Laboratório de Instrumentação e Física Experimental de Partículas \and \inst{2}Universidade da Beira Interior \samelineand \inst{3} Centro de Matemática e Aplicações (CMAUBI)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   RODAPÉ   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \footercontent{
-  Física 2024 \hfill
-%https://github.com/ljmamoreira/fslinky\hfill
-  UBI - Departamento de Física}
-% ====================
-% Logos
-% ====================
-% use this to include logos on the left and/or right side of the header:
+  Física 2024 \hfill UBI - Departamento de Física}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% LOGÓTIPOS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\logoright{\includegraphics[scale=1.5]{logos/DF2.png}}
 \logoleft{\includegraphics[scale=1.5]{logos/DF2.png}}
-% ====================
-% Corpo
-% ====================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   CONTEÚDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
 \begin{document}
 \begin{frame}[t]
 \begin{columns}[t]
 \separatorcolumn
 \begin{column}{\colwidth}
-% -------------------------------
-% Secção: Motivação/Introdução
-% -------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   MOTIVAÇÃO\INTRODUÇÃO   %%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+
 \begin{exampleblock}{Motivação/Introdução}
-  Vários vídeos disponíveis na plataforma YouTube mostram a queda de uma mola
+  Vários vídeos disponíveis na plataforma YouTube \cite{YouTube,YouTub,YouTube2} mostram a queda de uma mola
   elástica a partir de uma situação de repouso estático em que ela se encontra
   na vertical, suspensa da sua extremidade superior. Estes vídeos são
   interessantes porque mostram a extremidade inferior da mola como que a aguardar
   que a extremidade superior a atinja, antes de começar o seu movimento de queda
   propriamente dito. 
 	
-  A explicação deste comportamento é dada pela teoria da elasticidade de um meio
-  contínuo. A onda de deformação gerada na extremidade superior da mola quando é
+  Este comportamento é facilmente compreendido nos termos da teoria da elasticidade de um meio
+  contínuo. A onda de deformação gerada na extremidade superior da mola no momento em que é
   solta propaga-se longitudinalmente com uma velocidade finita, e só quando
   atinge a extremidade inferior, alterando aí o estado de deformação inicial, se
   modifica o equilíbrio de forças (peso e força elástica) que mantinham esta
@@ -112,23 +61,23 @@
 	
   Claramente, o modelo elementar de mola ideal, em que se despreza a sua massa,
   é insuficiente para enquadrar esta explicação, uma vez que não tendo massa,
-  (1)~a sua deformação é sempre uniforme; logo, a força sobre a extremidade
+  (1)~não tem inércia; assim, a sua deformação é sempre uniforme, logo, a força sobre a extremidade
   inferior altera-se instantaneamente assim que a extremidade superior inicia a
-  sua queda, e (2)~a mola não fica sujeita à gravidade, ou seja, nem sequer cai!
+  sua queda, e (2)~a mola não tem peso, ou seja, nem sequer cai!
   Mas será possível dar conta deste comportamento das molas reais considerando
   molas ideais com massas distribuídas regularmente ao longo do seu
   comprimento? Com este trabalho pretendeu-se dar resposta a esta questão.
 \end{exampleblock}
-% -------------------------------
-% Secção: Formalismo
-% -------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   FORMALISMO   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{block}{Formalismo}
 	\vspace{1cm}
 	\input{form}
 \end{block}
-% -------------------------------
-% Secção: Procedimento experimental
-% -------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   PROCEDIMENTO EXPERIMENTAL   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{block}{Procedimento experimental}
 Para verificar a validade das soluções obtidas numericamente, estudou-se o
 movimento de queda de uma mola de aço com bolas de ténis dispostas
@@ -155,10 +104,11 @@ observados experimentalmente, o que valida o modelo.
 \end{column}
 
 \separatorcolumn
+
 \begin{column}{\colwidth}
-% -------------------------------
-% Secção: Resultados
-% -------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   RESULTADOS   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{block}{Resultados}
 Na Figura~\ref{fig:a}  estão representados gráficos da posição calculada e
 observada de cada massas como funções do tempo, para os casos $N=2$ e $N=3$. É
@@ -189,26 +139,20 @@ for.
 	\begin{figure}
 	\begin{tikzpicture}
 			\begin{axis}[
-			                %height=,
-			                width=.4\colwidth,
-			                domain=0:1,
-			                xmin=0,xmax=.4,
-			                xlabel=\textcolor{UBI}{tempo $(\unit{\second})$},
-			                ymin=0,ymax=2.57,
-			                scaled ticks = false,
-			                %yticklabel style={/pgf/number format/.cd,fixed zerofill,precision=2},
-			                ylabel=\textcolor{UBI}{Posição $(\unit{\metre})$},
-					 ytick={0,0.5,1,1.5,2,2.5},yticklabels={0,0.5,1,1.5,2,2.5},
-					 xtick={0,0.1,0.2,0.3,0.4},xticklabels={0,0.1,0.2,0.3,0.4},
-			                %grid=both,major grid style={line width=.2pt,draw=#color},
-			                %samples=#,
-			                %every axis/.append style={axis line style={color}, tick style={color}},
-			                legend style={draw=none},
-			                legend cell align={left},
-			                %legend pos= south west,
-			                ticklabel style={UBI},
-			                every axis/.append style={axis line style={UBI}, tick style={UBI}},
-			                samples=800
+               width=.4\colwidth,
+               domain=0:1,
+               xmin=0,xmax=.4,
+               xlabel=\textcolor{UBI}{Tempo $(\unit{\second})$},
+               ymin=0,ymax=2.57,
+               scaled ticks = false,
+               ylabel=\textcolor{UBI}{Posição $(\unit{\metre})$},
+			   ytick={0,0.5,1,1.5,2,2.5},yticklabels={0,0.5,1,1.5,2,2.5},
+			   xtick={0,0.1,0.2,0.3,0.4},xticklabels={0,0.1,0.2,0.3,0.4},
+               legend style={draw=none},
+               legend cell align={left},
+               ticklabel style={UBI},
+               every axis/.append style={axis line style={UBI}, tick style={UBI}},
+               samples=800
 			]
 			\addplot[mypurple, smooth, thick] {-1621.92513511252*(x+0.055)^18 + 6121.49497805735*(x+0.055)^17 - 10620.203611305*(x+0.055)^16 + 11227.0136638144*(x+0.055)^15 - 8082.19566831113*(x+0.055)^14 + 4194.35994448389*(x+0.055)^13 - 1620.30359677421*(x+0.055)^12 + 474.390100098321*(x+0.055)^11 - 106.32394286827*(x+0.055)^10 + 18.1852651811809*(x+0.055)^9 - 1.45808049934885*(x+0.055)^8 + 0.232794509696558*(x+0.055)^7 - 3.30894854290934*(x+0.055)^6 + 0.000874488766885422*(x+0.055)^5 + 6.35364826832974*(x+0.055)^4 + 7.05060570450829e-7*(x+0.055)^3 - 9.81000000909166*(x+0.055)^2 - 1.32794452125934e-11*(x+0.055) + 2.53358200000001};
 			\addlegendentry[UBI]{Massa $0$};
@@ -229,7 +173,7 @@ for.
 			legend style={fill=white,draw=none},
 			legend cell align={left},
 			%legend pos=outer north east,
-			xlabel=\textcolor{UBI}{tempo $(\unit{\second})$},
+			xlabel=\textcolor{UBI}{Tempo $(\unit{\second})$},
 			ytick={0,0.5,1,1.5,2,2.5},yticklabels={0,0.5,1,1.5,2,2.5},
 			xtick={0,0.1,0.2,0.3,0.4},xticklabels={0,0.1,0.2,0.3,0.4},
 			ymax=2.57,
@@ -272,7 +216,7 @@ densidade de massa finita das molas reais.
 			                width=.4\colwidth,
 			                % domain=52:60,
 			                xmin=0,xmax=.4,
-			                xlabel=\textcolor{UBI}{tempo $(\unit{\second})$},
+			                xlabel=\textcolor{UBI}{Tempo $(\unit{\second})$},
 			               % ticks=none,
 			                xtick={0,0.1,0.2,0.3,0.4},xticklabels={0,0.1,0.2,0.3,0.4},
 			                ymin=-0.05,ymax=0.01,
@@ -299,13 +243,13 @@ densidade de massa finita das molas reais.
 			\addlegendentry[UBI]{$N=5$};
 			\end{axis}
 		\end{tikzpicture}
-		\caption{\label{fig:b} Posição da massa na extremidade inferior da mola, em função do tempo, para diferentes valores de $N$.}
+		\caption{\label{fig:b} Posição da massa na extremidade inferior da mola (relativamente à sua posição inicial) em função do tempo, para diferentes valores de $N$.}
 	\end{figure}
 	\vspace{2cm}
 \end{block}
-% -------------------------------
-% Secção: Conclusões
-% -------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   CONCLUSÕES   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{exampleblock}{Conclusões}
 
 O movimento de queda de molas elásticas reais ilustrado nos vídeos referidos na
@@ -323,50 +267,37 @@ comprimento.
 
 Todos os ficheiros produzidos neste trabalho (vídeos, ficheiros de dados, programas) estão disponíveis em \url{https://github.com/ljmamoreira/fslinky} (acesso possível também pelo QR code abaixo).
 
-%Este problema (com a abordagem que propomos) parece-nos um contexto adequado para
-%a ilustração das teorias de campo como limites continuos de teorias de massas
-%pontuais.
 \end{exampleblock}
-% -------------------------------
-% Secção: Referências
-% -------------------------------
-%\begin{block}{Referências}
-%\begin{multicols}{2}
-%    \footnotesize
-%    \bibliographystyle{plainurl}
-%    \bibliography{poster}
-%\end{multicols}
-%%    \nocite{*}
-%%    \footnotesize{\bibliographystyle{plainurl}\bibliography{poster}}
-%\end{block}
-% -------------------------------
-% Section: Portfolio
-% -------------------------------
-%\begin{block}{Mais Informações}
-%    \input{images/figure3}
-%\end{block}
 \end{column}
 \separatorcolumn
 \end{columns}
-%\separatorcolumn
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   REFERÊNCIAS   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{columns}[t]
 \begin{column}{0.9328981723\paperwidth}
 \begin{block}{Referências}
 \begin{multicols}{2}
-\begin{multicols}{3}
-    \nocite{*}
-    \scriptsize
-    \bibliographystyle{unsrturl}
-    \bibliography{poster}
+	
+	\begin{multicols}{3}
+	    \nocite{*}
+	    \scriptsize
+	    \bibliographystyle{unsrturl}
+	    \bibliography{poster}
+	\end{multicols} 
+	
+	\hfill
+	
+	\begin{figure}
+		\centering
+		\vspace*{-52.143pt}\includegraphics[height=8cm]{images/qrcode2}
+	\end{figure}
+
 \end{multicols}
-    \hfill
-    \begin{figure}
-    \centering
-  \vspace*{-1.45cm}\hfill\includegraphics[height=8cm]{images/qrcode2}
-\end{figure}
-%    \input{images/figure3}
-\end{multicols}
+
 \end{block}
+
 \end{column}
 \end{columns}
 \end{frame}

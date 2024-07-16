@@ -20,3 +20,5 @@ misc
 *.dat
 !poster.pdf
 *.bcf
+*.sty
+*.bbl
